@@ -1,4 +1,4 @@
-## Brewers Books
+## Brewers Social Network
 This is the continuation of an interview conducted by Brewer Digital. I was tasked with creating a 'social networking' web application. I chose to focus on building out an API for the purpose of demonstration as well as to follow the popular design pattern of having a backend 'api' which serves JSON data through it's endpoints for a frontend application to consume.
 
 A quick note on authentication/authorization. I chose to implement token-authentication for the purpose of novelty as well as working with a few new gems. Due to the lack of a users#create endpoint, in order to begin making requests to the api you must follow these steps: (after you've followed the initial database setup steps)
