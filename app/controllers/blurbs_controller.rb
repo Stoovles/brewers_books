@@ -11,7 +11,6 @@ class BlurbsController < ApplicationController
 
   end
 
-
   def create
     Blurb.create(blurb_params)
     render :json => {:response => 'Blurb Created' },:status => 201
