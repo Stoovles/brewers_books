@@ -1,6 +1,14 @@
 class BlurbsController < ApplicationController
   before_action :set_blurb, only: [:show]
   before_action :set_blurbs, only: [:index]
+  before_action :require_permission, only: [:edit, :destroy]
+
+  def require_permission
+    binding.pry
+    if current_user != Blurb.find(params[:id]).user
+      render :json => {:response => 'Forbidden' },:status => 403
+    end
+  end
 
   def show
     render json: BlurbSerializer.new(@blurb)
@@ -16,16 +24,17 @@ class BlurbsController < ApplicationController
     render :json => {:response => 'Blurb Created' },:status => 201
   end
 
+  def edit
+
+  end
+
   def destroy
-    blurb = Blurb.destroy(blurb_params[:id])
+    blurb = Blurb.destroy(params[:id])
     render :json => {:response => 'Blurb Deleted' },:status => 200
   end
 
   private
 
-  def blurb_params
-    params.permit(:summary)
-  end
 
   def set_blurb
     @blurb = Blurb.find(params[:id])

@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  require 'pry'
 
   def create
     Blurb.find(params[:id]).comments.create(comment_params)
