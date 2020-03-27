@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  #routing needs to be built out for users controller
+
   def new
   end
 
