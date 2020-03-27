@@ -4,7 +4,6 @@ class BlurbsController < ApplicationController
   before_action :require_permission, only: [:edit, :destroy]
 
   def require_permission
-    binding.pry
     if current_user != Blurb.find(params[:id]).user
       render :json => {:response => 'Forbidden' },:status => 403
     end
@@ -25,7 +24,7 @@ class BlurbsController < ApplicationController
   end
 
   def edit
-
+    #for another day
   end
 
   def destroy
@@ -35,6 +34,9 @@ class BlurbsController < ApplicationController
 
   private
 
+  def blurb_params
+    params.permit(:summary)
+  end
 
   def set_blurb
     @blurb = Blurb.find(params[:id])
