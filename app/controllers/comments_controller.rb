@@ -6,8 +6,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    blurb = Blurb.destroy(blurb_params[:id])
-    render :json => {:response => 'Blurb Deleted' },:status => 200
+    comment = Comment.destroy(params[:id])
+    render :json => {:response => 'Comment Deleted' },:status => 200
   end
 
 
