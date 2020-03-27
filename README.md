@@ -141,6 +141,7 @@ ruby '2.4.1'
 ### Database Setup
 ~~~
 $ rake db:setup
+$ rake db:migrate
 ~~~
 
 ### Run the application locally
