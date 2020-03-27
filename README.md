@@ -140,8 +140,9 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 ruby '2.4.1'
 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
-### Database Setup
+### Initial Setup 
 ~~~
+$ bundle install
 $ rake db:setup
 $ rake db:migrate
 ~~~
