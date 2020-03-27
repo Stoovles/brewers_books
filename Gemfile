@@ -4,7 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.1'
 gem 'pry', '~> 0.12.2' #debugger
 gem 'fast_jsonapi' #serialization
+
 gem 'jwt' #token generator
+gem 'simple_command' #authentication handler
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
