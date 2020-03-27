@@ -25,8 +25,10 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 <details>
 <summary>GET '/blurbs' </summary> Status Code: 200 OK
 <br>
+    
 ```
- {
+    
+{
     "data": [{
             "id": "1",
             "type": "blurb",
@@ -46,7 +48,7 @@ A future goal would be to implement the ability for 'guest users' to be able to 
             "id": "2",
             "type": "blurb",
             "attributes": {
-                "summary": "\"this is my blurb\"",
+                "summary": "this is my blurb",
                 "comments": []
             }
         }, ...
