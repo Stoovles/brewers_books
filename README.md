@@ -134,11 +134,7 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 ```
 </details>
 
-
-
-
-
-* Ruby/Rails version
+### Ruby/Rails version
 ruby '2.4.1'
 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
@@ -150,7 +146,4 @@ $ rake db:setup
 ### Run the application locally
 ~~~
 $ rails server
-
-* Services (job queues, cache servers, search engines, etc.)
-
-# brewers_books
+~~~
