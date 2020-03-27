@@ -2,7 +2,6 @@ class BlurbsController < ApplicationController
   before_action :set_blurb, only: [:show]
   before_action :set_blurbs, only: [:index]
 
-
   def show
     render json: @blurb
   end
