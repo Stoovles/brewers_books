@@ -25,7 +25,6 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 <details>
 <summary>GET '/blurbs' </summary> Status Code: 200 OK
 <br>
-
 ```
  {
     "data": [{
@@ -55,7 +54,6 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 }
 ```
 </details>
-<br>
 <details>
 <summary>GET '/blurbs/:id' </summary> Status Code: 200 OK
 <br>
@@ -90,7 +88,7 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 </details>
 
 <details>
-<summary>POST '/blurbs' </summary> Status Code: 201 Created
+<summary>POST '/blurbs?summary=example_blurb_post' </summary> Status Code: 201 Created
 <br>
  
  ```
@@ -101,7 +99,7 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 </details>
 
 <details>
-<summary>POST '/blurb/:id/comments' </summary> Status Code: 201 Created
+<summary>POST '/blurb/:id/comments?comment=Hello_World' </summary> Status Code: 201 Created
 <br>
  
   ```
@@ -126,7 +124,7 @@ A future goal would be to implement the ability for 'guest users' to be able to 
 </details>
 
 <details>
- <summary>POST '/authenticate' </summary> Status Code: 200 OK
+ <summary>POST '/authenticate?email=example@mail.com&password=password_goes_here' </summary> Status Code: 200 OK
  <br>
  
 ```
