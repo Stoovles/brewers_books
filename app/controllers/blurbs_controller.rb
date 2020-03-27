@@ -3,7 +3,7 @@ class BlurbsController < ApplicationController
   before_action :set_blurbs, only: [:index]
 
   def show
-    render json: @blurb
+    render json: BlurbSerializer.new(@blurb)
   end
 
   def index
@@ -17,8 +17,8 @@ class BlurbsController < ApplicationController
   end
 
   def destroy
-
-
+    blurb = Blurb.destroy(blurb_params[:id])
+    render :json => {:response => 'Blurb Deleted' },:status => 200
   end
 
   private

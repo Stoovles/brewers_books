@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :blurbs, only: [:index, :show, :create, :destroy]
   post '/blurb/:id/comments', to: 'comments#create'
 
+
 end

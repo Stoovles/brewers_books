@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_191158) do
+ActiveRecord::Schema.define(version: 2020_03_27_040214) do
 
   create_table "blurbs", force: :cascade do |t|
     t.text "summary"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 2020_03_26_191158) do
   create_table "comments", force: :cascade do |t|
     t.integer "blurb_id"
     t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
